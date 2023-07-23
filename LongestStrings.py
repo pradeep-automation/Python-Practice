@@ -16,7 +16,7 @@ def long_substring(s):
     return result
 
 
-print(long_substring('pycpycddpcyp'))
+print(long_substring('abcabcbbcdags'))
 
 
 # def long_substring(my_string):
