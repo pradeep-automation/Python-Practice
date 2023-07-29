@@ -1,20 +1,28 @@
-# [0,1,1,2,,3,5,8,13] ----- 8
+# exp = "A man, a plan, a canal, Panama!"
+#
+# def is_palindrome(expr: str):
+#     ls = []
+#     # for char in expr:
+#     #     if char.isalnum():
+#     #         ls.append(char.lower())
+#     # clean_str = "".join(ls)
+#     clean_str = "".join(char.lower() for char in expr if char.isalnum())
+#
+#     l, r = 0, len(clean_str)-1
+#
+#     while l<r:
+#         if clean_str[l] != clean_str[r]:
+#             return False
+#         l += 1
+#         r -= 1
+#     return True
+#
+# print(is_palindrome(exp))
 
+def my_func():
+    a, *b, c = ['car', 'dog', 'lion', 'cat']
+    item = b
 
-def fibonacci(series):
-    if series <= 0:
-        return []
-    elif series == 1:
-        return [0]
-    elif series == 2:
-        return [0,1]
-    else:
-        fib_series = [0,1]
-        len(fib_series)
-        while len(fib_series) < series:
-            next_term = fib_series[-1]+fib_series[-2]
-            fib_series.append(next_term)
-        return fib_series
+    return 'dog' in [item] or None
 
-
-print(fibonacci(5))
+print(my_func())

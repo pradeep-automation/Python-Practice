@@ -10,22 +10,6 @@ Example: Input: nums = [2,7,11,15], target = 9
 
 """
 
-#
-# def twosums(nums, target):
-#     complements = {}
-#
-#     for index, num in enumerate(nums):
-#         complement = target - num
-#
-#         if complement in complements:
-#             return [complements[complement], index]
-#         complements[num] = index
-#     return
-#
-# nums = [7,11,15,2]
-# target = 9
-#
-# print(twosums(nums, target))
 
 def two_sums(nums, target):
     complements = {}
@@ -37,7 +21,7 @@ def two_sums(nums, target):
     return
 
 
-nums = [7,11,15,2]
+nums = [7, 11, 15, 2]
 target = 9
 
 print(two_sums(nums, target))
