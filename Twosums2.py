@@ -27,5 +27,5 @@ def twosums(ls, target):
     return []
 
 
-print(twosums(my_lst, 11))
+print(twosums(my_lst, 9))
 

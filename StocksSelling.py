@@ -26,6 +26,7 @@ def maxProfit(prices):
         r += 1
     return maxP
 
-
-prices = [7,9,6,3,4,15]
+prices = [2,5,6,1,3,8,7,13,11,20,25,1]
 print(maxProfit(prices))
+
+

@@ -9,10 +9,10 @@ def find_occurrences(expr, sub):
     for index in range(n-m+1):
         if expr[index:index+m] == sub:
             indices.append(index)
-    return indices[0]
+    return indices
 
 
-print(find_occurrences("", "abc"))
+print(find_occurrences("pabcdabcdabc", "abc"))
 
 
 

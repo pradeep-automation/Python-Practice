@@ -4,8 +4,6 @@ def fibonacci(num):
         return []
     elif num == 1:
         return [0]
-    elif num == 2:
-        return [0,1]
     else:
         fib_series = [0,1]
         while len(fib_series) < num:
@@ -13,7 +11,7 @@ def fibonacci(num):
             fib_series.append(next_term)
         return fib_series
 
-print(fibonacci(8))
+print(fibonacci(2))
 
 # def add_numbers():
 #     n = 0

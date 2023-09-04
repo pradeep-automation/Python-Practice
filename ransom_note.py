@@ -16,7 +16,7 @@ def can_construct(ransomNote, magazine):
         char_freq[c] -= 1
     return True
 #
-print(can_construct("a", "b"))
+print(can_construct("prdp", "pradeep"))
 #
 # print(can_construct("xyz", "xyzssedzysdse"))
 
