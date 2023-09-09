@@ -13,11 +13,12 @@ The tests are generated such that there is exactly one solution. You may not use
 Your solution must use only constant extra space. """
 
 my_lst = [1, 3, 4, 5, 7, 10, 11]
-def twosums(ls, target):
-    l, r = 0 , len(ls)-1
 
+
+def two_sums(nums, target):
+    l, r = 0, len(nums)-1
     while l < r:
-        cur_sum = ls[l] + ls[r]
+        cur_sum = nums[l] + nums[r]
         if cur_sum > target:
             r -= 1
         elif cur_sum < target:
@@ -27,5 +28,4 @@ def twosums(ls, target):
     return []
 
 
-print(twosums(my_lst, 9))
-
+print(two_sums(my_lst, 40))

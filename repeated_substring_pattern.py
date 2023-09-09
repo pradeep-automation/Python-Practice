@@ -10,7 +10,7 @@ def repeatedSubstringPattern(s: str) -> bool:
     return False
 
 
-print(repeatedSubstringPattern("ababa"))
+print(repeatedSubstringPattern("ababab"))
 
 # from abc import ABC, abstractmethod
 
