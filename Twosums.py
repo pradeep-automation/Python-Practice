@@ -9,20 +9,50 @@ You can return the answer in any order.
 Example: Input: nums = [2,7,11,15], target = 9
 
 """
+nums = [2, 11, 7, 15]
+target = 18
 
-
-def two_sum(nums, target):
+def two_sums(nums, target):
     complements = {}
 
     for index, num in enumerate(nums):
         complement = target - num
         if complement in complements:
-            return [complements[complement], index]
-        complements[num] = index
-    return []
+            return [index, complements[complement]]
+        complements.update({num: index})
+    return
 
 
-ls = [2,5,15,10,35,20]
-print(two_sum(ls, 25))
+print(two_sums(nums, target))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+# def two_sum(nums, target):
+#     complements = {}
+#
+#     for index, num in enumerate(nums):
+#         complement = target - num
+#         if complement in complements:
+#             return [complements[complement], index]
+#         complements[num] = index
+#     return []
+#
+#
+# ls = [2,5,15,10,35,20]
+# print(two_sum(ls, 25))
 
 

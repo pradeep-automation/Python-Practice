@@ -20,8 +20,6 @@ class Burger:
         return f"Burger has {self.buns}, {self.patty} and {self.cheese} cheese"
 
 
-
-
 class BurgerBuilder:
     def __init__(self):
         self.burger = Burger()

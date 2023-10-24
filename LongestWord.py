@@ -3,16 +3,16 @@
 # If multiple words have the same maximum length, return the first occurrence.
 
 
-# def longest_word(s):
-#     ls = s.split(" ")
-#     return max(ls, key=len)
-#
-#
-# sentence = "The quick brown fox jumped over the lazy dog"
-# print(longest_word(sentence))
+def longest_word(s):
+    ls = s.split(" ")
+    return max(ls, key=len)
 
 
-def longest_word(sentence):
+sentence = "The quick brown fox jumped over the lazy dog"
+print(longest_word(sentence))
+
+
+def longest_words(sentence):
     words = sentence.split(" ")
     longest = ""
 
@@ -24,4 +24,4 @@ def longest_word(sentence):
 
 sen = "The quick brown fox jumped over the lazy diiiiiog"
 
-print(longest_word(sen))
+print(longest_words(sen))

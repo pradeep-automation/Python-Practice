@@ -6,6 +6,7 @@ def pattern(st,n):
         var -= 1
 
 
+print("Hello")
 pattern('*',5)
 
 #    *
@@ -13,21 +14,21 @@ pattern('*',5)
 #  ******
 # ********
 #
-# maxi = [2,4,12,1,8,10,7]
-#
-#
-# def find_max(ls):
-#     if not ls:
-#         return None
-#     else:
-#         max_ele = ls[0]
-#         for num in ls:
-#             if num > max_ele:
-#                 max_ele = num
-#         return max_ele
+maxi = [2,4,12,1,8,10,7]
 
 
-# print(find_max(maxi))
+def find_max(ls):
+    if not ls:
+        return None
+    else:
+        max_ele = ls[0]
+        for num in ls:
+            if num > max_ele:
+                max_ele = num
+        return max_ele
+
+
+print(find_max(maxi))
 
 
 # my_array = ['a', 'b', 'c', 'b', 'd', 'e', 'a']

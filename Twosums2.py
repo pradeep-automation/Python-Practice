@@ -14,7 +14,6 @@ Your solution must use only constant extra space. """
 
 my_lst = [1, 3, 4, 5, 7, 10, 11]
 
-
 def two_sums(nums, target):
     l, r = 0, len(nums)-1
     while l < r:

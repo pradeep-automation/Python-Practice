@@ -1,17 +1,17 @@
-def fibonacci(num):
-
-    if num <= 0:
+def fibonacci(n):
+    if n <= 0:
         return []
-    elif num == 1:
+    elif n == 1:
         return [0]
     else:
-        fib_series = [0,1]
-        while len(fib_series) < num:
-            next_term = fib_series[-1] + fib_series[-2]
-            fib_series.append(next_term)
-        return fib_series
+        fib_s = [0, 1]
+        while len(fib_s) < n:
+            next_t = fib_s[-1] + fib_s[-2]
+            fib_s.append(next_t)
+        return fib_s
 
-print(fibonacci(2))
+
+print(fibonacci(7))
 
 # def add_numbers():
 #     n = 0

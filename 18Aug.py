@@ -14,36 +14,25 @@ def longsubstring(st):
     return result
 
 
-print(longsubstring(expr))
-#
-# expr = "abcabcabcabc"
-# subx = "abc"
-#
-# def is_substring_multiple(st):
-#     n = len(st)
-#     # m = len(sub)
-#     for i in range(1, len(st)//2 + 1):
-#         if n % i == 0 and st[:i] * (n//i) == st:
-#             return True
-#     return False
-#
-#
-# print(is_substring_multiple(expr))
+def long_sub(string):
 
+    ls = []
+    l = 0
+    result = 0
 
-exp= "My Cat is Jumping on the floor"
+    for r in range(len(string)):
+        while string[r] in ls:
+            ls.remove(string[l])
+            l += 1
+        ls.append(string[r])
+        result = max(result, r-l+1)
+    return result, "".join(ls)
 
-#
-# def longest(expr: str):
-#     ls = expr.split()
-#     longest_char = ""
-#     for item in ls:
-#         if len(item) > len(longest_char):
-#             longest_char = item
-#     return longest_char
-#
-#
-# print(longest(exp))
+st = "racecarcrash"
+
+print(long_sub(st))
+print(longsubstring(st))
+
 
 
 

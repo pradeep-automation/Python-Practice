@@ -1,13 +1,21 @@
-# def lengthOfLastWord(s: str) -> int:
-#     st = s.rstrip()
-#     stt = reversed(st)
-#     return len(stt[1])
+def lengthOfLastWord(s: str):
+    # # st = s.rstrip()
+    # stt = "".join(reversed(s.rstrip())).split()
+    # print(len(stt[0]))
+    last_word_len = 0
+    # word_started = False
+    for char in s:
+        if char != " ":
+            last_word_len += 1
+            # word_started = True
+        else:
+            last_word_len = 0
+            # word_started = False
+    return last_word_len
 
 
-s = "Hello World   "
-# print(lengthOfLastWord(s))
 
-st = s.rstrip()
-stt = "".join(reversed(s.rstrip())).split()
-print(len(stt[0]))
+
+sr = "Hello World Pradeep   "
+print(lengthOfLastWord(sr.rstrip()))
 

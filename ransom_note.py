@@ -20,18 +20,18 @@ print(can_construct("prdp", "pradeep"))
 #
 # print(can_construct("xyz", "xyzssedzysdse"))
 
-# from collections import Counter
-# def can_construct(ransomNote, magazine):
-#     st1 = Counter(ransomNote)
-#     st2 = Counter(magazine)
-#     if st1 & st2 == st1:
-#         return True
-#     return False
-#
-#
-# print(can_construct("aa", "axbbbb"))
-#
-# print(can_construct("xyz", "xyzssedzysdse"))
+from collections import Counter
+def can_construct(ransomNote, magazine):
+    st1 = Counter(ransomNote)
+    st2 = Counter(magazine)
+    if st1 & st2 == st1:
+        return True
+    return False
+
+
+print(can_construct("aa", "axbbbb"))
+
+print(can_construct("xyz", "xyzssedzysdse"))
 
 
 
