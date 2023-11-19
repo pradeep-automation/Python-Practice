@@ -19,12 +19,12 @@ def two_sums(nums, target):
         complement = target - num
         if complement in complements:
             return [index, complements[complement]]
-        complements.update({num: index})
+        complements[num] = index
+        # complements.update({num: index})
     return
 
 
 print(two_sums(nums, target))
-
 
 
 

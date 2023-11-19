@@ -1,4 +1,4 @@
-# message = "Hello Python!"
+message = "Hello Python!"
 # # Indexing
 # print(message[7])
 # print(message[11])
@@ -16,7 +16,9 @@
 # print(message[2:])
 # print(message[:] == message)  # Works just like message.
 # # negative indices also allowed. Counting starts from the end of the string where first index is -1
-# print(message[-6:-1:2],"my mesaage")
+print(message[::-1],"my mesaage")
+m = reversed(message)
+print()
 # print(".................")
 #
 # print(len(message))

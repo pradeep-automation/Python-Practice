@@ -29,31 +29,7 @@
 #
 # print(lam)
 # print(lam2)
-#
-# class Singleton:
-#     instance = None
-#
-#     def __new__(cls, *args, **kwargs):
-#         if cls.instance is None:
-#             cls.instance = super(Singleton, cls).__new__(cls)
-#         return cls.instance
-#
-#     def __init__(self):
-#         self.data = None
-#
-#     def set_data(self, data):
-#         self.data = data
-#
-#     def get_data(self):
-#         return self.data
-#
-#
-# single1 = Singleton()
-# single2 = Singleton()
-# single1.set_data("pradeep")
-#
-# print(single2.get_data())
-#
+
 # st = "abcabcabcabc"
 #
 # def repeat(s):

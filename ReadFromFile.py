@@ -18,3 +18,5 @@ with open("my_news.txt", 'r') as file:
 print(my_dic)
 print(my_dic["the"])
 print(my_dic.pop("the"))
+
+

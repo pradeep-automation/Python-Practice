@@ -10,7 +10,7 @@ def isPalindrome(x: int) -> bool:
     return reversed_num == x
 
 
-print(isPalindrome(1101))
+print(isPalindrome(1001))
 
 
 def is_num_palin(x):

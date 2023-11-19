@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20231106 08:48:06.987" rpa="false" schemaversion="3">
+<suite id="s1" name="Api" source="C:\Development\robot-scripts\Python-Practice\Exceptions\api.robot">
+<test id="s1-t1" name="validate the sample curl" line="10">
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${json_data}</var>
+<arg>C:\\Development\\robot-scripts\\Python-Practice\\Exceptions\\test.json</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20231106 08:48:07.365" level="INFO">${json_data} = {'user': {'first_name': 'Test', 'last_name': '', 'email': 'Felicia.Roberts78@hotmail.com', 'password': '12345678', 'phone_number': '+91-8285408009', 'user_type': 'User', 'currency_id': 1}}</msg>
+<status status="PASS" starttime="20231106 08:48:07.365" endtime="20231106 08:48:07.365"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${json_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231106 08:48:07.365" endtime="20231106 08:48:07.365"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>https://api-staging-builder.engineer.ai/users</arg>
+<arg>json=${json_data}</arg>
+<arg>expected_status=422</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231106 08:48:08.802" level="INFO">POST Request : url=https://api-staging-builder.engineer.ai/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '188', 'Content-Type': 'application/json'} 
+ body=b'{"user": {"first_name": "Test", "last_name": "", "email": "Felicia.Roberts78@hotmail.com", "password": "12345678", "phone_number": "+91-8285408009", "user_type": "User", "currency_id": 1}}' 
+ </msg>
+<msg timestamp="20231106 08:48:08.802" level="INFO">POST Response : url=https://api-staging-builder.engineer.ai/users 
+ status=422, reason=Unprocessable Entity 
+ headers={'Date': 'Mon, 06 Nov 2023 03:18:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Vary': 'Accept, Origin', 'Set-Cookie': '_session_id=MitZeEdySGQ1YWR6RkovWHdqTEJqZVl0WExrRFlHZGtHdUNGbHhoS0REMFRuUjhITXROSHFqVHhJM0dValU2TVBoaWkrbklhdndvVndjcFMzczFCK2c9PS0td1dhTjQ4ak1DSnVUSDB5R29zUjVtZz09--0013f81602958874d580f0842be7af70e7dcc8a2; path=/; HttpOnly, _session_id=MitZeEdySGQ1YWR6RkovWHdqTEJqZVl0WExrRFlHZGtHdUNGbHhoS0REMFRuUjhITXROSHFqVHhJM0dValU2TVBoaWkrbklhdndvVndjcFMzczFCK2c9PS0td1dhTjQ4ak1DSnVUSDB5R29zUjVtZz09--0013f81602958874d580f0842be7af70e7dcc8a2; path=/; HttpOnly, _engineerai_session=U3V1VEQrMis2QUF6MkIxYTRXVnZ0RzJRZFVGUUVlUlY2NDRydWs3RlhNSnp1UlB5MDV0T05mZlVPdm1oNW9lc2ZoR1RqdHRzamZ0a2hxSVdVa3RTZEE9PS0tRi82S094dkFXSlUxVlhlbzZORlVxUT09--70d73305ae645abcdde383dc3ce8debb52669b20; path=/; HttpOnly', 'Cache-Control': 'no-cache', 'X-Request-Id': '52b7671b4e74130ddff5ead441ea9e79', 'X-Runtime': '0.724217', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains'} 
+ body={"message":"Sign up failure","errors":{"email":["has already been taken"]}} 
+ </msg>
+<msg timestamp="20231106 08:48:08.802" level="INFO">${resp} = &lt;Response [422]&gt;</msg>
+<status status="PASS" starttime="20231106 08:48:07.365" endtime="20231106 08:48:08.802"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${resp.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231106 08:48:08.802" endtime="20231106 08:48:08.802"/>
+</kw>
+<status status="PASS" starttime="20231106 08:48:07.365" endtime="20231106 08:48:08.802"/>
+</test>
+<status status="PASS" starttime="20231106 08:48:06.987" endtime="20231106 08:48:08.802"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Api">Api</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -25,7 +25,7 @@ pattern = r"^orange"
 # pattern = r"orange$"
 st = "orange are delicious, and Orange pie is great"
 match = re.search(pattern, st, re.IGNORECASE)
-print(match.group())
+print("hellllllo", match.group())
 
 if match:
     print("yes")
@@ -33,6 +33,7 @@ else:
     print("No")
 
 num_patt = r"92\d{3}90326122[27]\d{12}"
+# num_pat = r"\d{29}"
 
 track = "92748903261227000000000727"
 
@@ -52,5 +53,5 @@ print(x)
 # Replace all white-space characters with the digit "9":
 
 txt = "The rain in Spain"
-x = re.sub(r"ain", "9", txt)
+x = re.sub(r"(rain|Spain)", "9", txt)
 print(x)
