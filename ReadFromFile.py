@@ -16,7 +16,7 @@ with open("my_news.txt", 'r') as file:
         #     my_dic[item] = 1
 
 print(my_dic)
-print(my_dic["the"])
-print(my_dic.pop("the"))
+# print(my_dic["the"])
+# print(my_dic.pop("the"))
 
 

@@ -38,3 +38,4 @@ def product_ex_self(nums: list):
 
 numss = [1,2,3,4]
 print(product_ex_self(numss))
+

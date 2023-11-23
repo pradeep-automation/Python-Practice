@@ -25,8 +25,7 @@ def real_func():
 
 deco = decorator_func(real_func)
 deco()
-
-
 # real_func()
+
 
 

@@ -13,24 +13,24 @@ def longsubstring(st):
         result = max(result, r-l+1)
     return result
 
+#
+# def long_sub(string):
+#
+#     ls = []
+#     l = 0
+#     result = 0
+#
+#     for r in range(len(string)):
+#         while string[r] in ls:
+#             ls.remove(string[l])
+#             l += 1
+#         ls.append(string[r])
+#         result = max(result, r-l+1)
+#     return result, "".join(ls)
 
-def long_sub(string):
+st = "abcbjdfbbc"
 
-    ls = []
-    l = 0
-    result = 0
-
-    for r in range(len(string)):
-        while string[r] in ls:
-            ls.remove(string[l])
-            l += 1
-        ls.append(string[r])
-        result = max(result, r-l+1)
-    return result, "".join(ls)
-
-st = "racecarcrash"
-
-print(long_sub(st))
+# print(long_sub(st))
 print(longsubstring(st))
 
 

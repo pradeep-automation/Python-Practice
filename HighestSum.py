@@ -16,5 +16,6 @@ def highest_sum(nums:list):
             sec_high = num
     return high + sec_high
 
+
 ls = [2, 7, 11, 6, 17, 23, 45]
 print(highest_sum(ls))

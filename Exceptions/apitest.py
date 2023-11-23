@@ -6,6 +6,7 @@ my_dict = {"user":{"first_name":"Test","last_name":"",
 with open("test.json", "r") as f:
     data = f.read()
 
+
 resp = requests.post("https://api-staging-builder.engineer.ai/users", json=json.loads(data))
 print(resp.json())
 
